@@ -18,6 +18,7 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'porall1441c7a2-auth'
+  extra-token: 'this-is-super-token'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
