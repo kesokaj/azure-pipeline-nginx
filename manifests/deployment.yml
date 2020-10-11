@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kesokajazurepipelinenginx 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kesokajazurepipelinenginx
+  template:
+    metadata:
+      labels:
+        app: kesokajazurepipelinenginx 
+    spec:
+      containers:
+        - name: kesokajazurepipelinenginx 
+          image: porall.azurecr.io/kesokajazurepipelinenginx
+          ports:
+          - containerPort: 80
