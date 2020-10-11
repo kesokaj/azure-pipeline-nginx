@@ -1,0 +1,16 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefikporall-vmar-se
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`traefikporall.vmar.se`)
+    kind: Rule
+    services:
+    - name: kesokajazurepipelinenginx
+      port: 80
+  tls:
+    certResolver: default

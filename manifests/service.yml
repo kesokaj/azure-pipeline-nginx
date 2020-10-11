@@ -3,7 +3,6 @@ kind: Service
 metadata:
     name: kesokajazurepipelinenginx
 spec:
-    type: LoadBalancer
     ports:
     - port: 80 
     selector:
